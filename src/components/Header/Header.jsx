@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "reactstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPhone, faUser, faUserPlus, faCar, faGlobe, faClock } from "@fortawesome/free-solid-svg-icons"
+import { faPhone, faUser, faUserPlus, faCar, faGlobe, faClock, faBars } from "@fortawesome/free-solid-svg-icons"
 import { Link, NavLink } from "react-router-dom"
 import "../../styles/header.css"
 
@@ -31,6 +31,9 @@ const navLinks = [
 
 const Header = () => {
   const menuRef = useRef(null);
+
+  const toggleMenu = () => menuRef.current.classList.toggle("menu-active");
+  
   return (
     <header className="header">
       {/**===== Top Header ===== */}
@@ -48,14 +51,14 @@ const Header = () => {
 
             <Col lg="6" md="6" sm="6">
               <div className="header-top-right d-flex align-items-center justify-content-end gap-3">
-                {/* <Link to='#' className="d-flex align-items-center gap-1">
+                <Link to='#' className="d-flex align-items-center gap-1">
                   <FontAwesomeIcon className="faUser" icon={faUser} /> Login
-                </Link> */}
+                </Link>
 
 
-                {/* <Link to='#' className="d-flex align-items-center gap-1">
+                <Link to='#' className="d-flex align-items-center gap-1">
                   <FontAwesomeIcon className="faUserPlus" icon={faUserPlus} /> Register
-                </Link> */}
+                </Link>
               </div>
             </Col>
           </Row>
@@ -69,10 +72,10 @@ const Header = () => {
             <Col lg="4" md="3" sm="4">
               <div className="logo">
                 <h1>
-                  {/* <Link to="/home" className="d-flex align-items-center gap-2">
+                  <Link to="/home" className="d-flex align-items-center gap-2">
                     <FontAwesomeIcon className="faCar" icon={faCar} />
                     <span>Car Rental US</span>
-                  </Link> */}
+                  </Link>
                 </h1>
               </div>
             </Col>
@@ -103,12 +106,26 @@ const Header = () => {
 
             <Col lg="2" md="3" sm="0" className="d-flex align-item-center justify-content-end">
               <button className="header-btn btn">
-                {/* <Link to="/contact">
+                <Link to="/contact">
                   <FontAwesomeIcon className="faPhone" icon={faPhone} /> Give us a Call!
-                </Link> */}
+                </Link>
               </button>
             </Col>
           </Row>
+        </Container>
+      </div>
+
+      <div className="main-navbar">
+        <Container>
+          <div className="nav-wrapper d-flex align-items-center justify-content-between">
+            <span className="mobile-menu">
+              <FontAwesomeIcon className="faBars" icon={faBars} />
+            </span>
+
+            <div className="nav" ref={menuRef} onClick={toggleMenu}>
+
+            </div>
+          </div>
         </Container>
       </div>
     </header>
@@ -116,3 +133,4 @@ const Header = () => {
 }
 
 export default Header
+
