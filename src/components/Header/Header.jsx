@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "reactstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPhone, faUser, faUserPlus, faCar, faGlobe, faClock, faBars } from "@fortawesome/free-solid-svg-icons"
+import { faPhone, faUser, faUserPlus, faCar, faGlobe, faClock, faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { Link, NavLink } from "react-router-dom"
 import "../../styles/header.css"
 
@@ -87,7 +87,7 @@ const Header = () => {
                 </span>
                 <div className="header-location-content">
                   <h4>123 Ford St</h4>
-                  <h6>West HartFord, CT</h6>
+                  <h6>West Hartford, CT</h6>
                 </div>
               </div>
             </Col>
@@ -123,6 +123,28 @@ const Header = () => {
             </span>
 
             <div className="nav" ref={menuRef} onClick={toggleMenu}>
+              <div className="menu">
+                {navLinks.map((item, index) =>(
+                  <NavLink
+                  to={item.path}
+                  className={(navClass) =>
+                    navClass.isActive ? "nav-active nav-item" : "nav-item"
+                  }
+                  key={index}
+                  >
+                    {item.display}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+
+            <div className="nav-right">
+              <div className="search-box">
+                <input type="text" placeholder="Search" />
+                <span>
+                  <FontAwesomeIcon className="faMagnifyingGlass" icon={faMagnifyingGlass} />
+                </span>
+              </div>
 
             </div>
           </div>
