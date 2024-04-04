@@ -140,10 +140,10 @@ const Header = () => {
 
             <div className="nav-right">
               <div className="search-box">
-                <input type="text" placeholder="Search" />
                 <span>
                   <FontAwesomeIcon className="faMagnifyingGlass" icon={faMagnifyingGlass} />
                 </span>
+                <input type="text" placeholder="Search" />
               </div>
 
             </div>

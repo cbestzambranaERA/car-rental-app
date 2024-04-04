@@ -14,6 +14,7 @@
 
 .header-top-left span {
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .header-top-help {
@@ -34,6 +35,7 @@
   text-decoration: none;
   color: #fff;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .header-top-right a:hover {
@@ -162,11 +164,9 @@
 }
 
 .search-box span .faMagnifyingGlass {
-  color: #000d8b;
+  color: #ffffff;
   cursor: cursor;
-  position: fixed;
-  left: 640px;
-  top: 182px;
+  margin-right: 14px;
 }
 
 .nav-active {

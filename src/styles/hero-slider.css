@@ -1,0 +1,85 @@
+.slider-item {
+  max-width: 100%;
+  height: 650px;
+}
+
+.slider-item-01 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(64, 67, 96, 0.5)),
+  url("../assets/images//slider-images/jeep-cherokee.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider-item-02 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(64, 67, 96, 0.5)),
+  url("../assets/images//slider-images/dodge-durango.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider-item-03 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(64, 67, 96, 0.5)),
+  url("../assets/images//slider-images/gmc-suburban.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-slider {
+  overflow: hidden;
+}
+
+.slider-content {
+  padding-top: 150px;
+}
+
+.slider-content h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.reserve-btn {
+  background: #fff !important;
+  color: #000d8b !important;
+  border: none;
+  outline: none;
+}
+
+.reserve-btn a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000d8b;
+}
+
+.reserve-btn:hover {
+  background: #000d8b;
+  color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+  .slider-item {
+    height: 530px;
+    max-width: 100vh;
+  }
+
+  .slider-content {
+    margin-top: -50px;
+  }
+
+  .slider-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slider-item {
+    height: 450px;
+  }
+
+  .slider-content h1 {
+    font-size: 1.5rem;
+  }
+}
