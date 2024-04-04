@@ -1,0 +1,106 @@
+.car-item {
+  border: 1px solid #8897a536;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.car-item-info span .faCar {
+  color: #fbad2f;
+  font-size: 1.1rem;
+}
+
+.car-item-btn {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background: #000d8b;
+  padding: 8px 0px 0px 0px;
+}
+/**
+* all around = 1px;
+* top and bottom, left and right = 1px, 1px;
+* top, left and right, bottom = 1px, 1px, 1px;
+*top, right, bottom, left = 1px, 1px, 1px, 1px;
+*/
+
+.car-item-btn a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.car-item-btn a:hover {
+  color: gray;
+}
+
+.car-btn-details {
+  background: #fbad2f;
+  border-radius: 4px;
+}
+
+.car-btn-rent {
+  border-radius: 4px;
+}
+
+.car-item-content h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.car-item-content h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 992px) {
+  .car-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  .car-item-info {
+    flex-wrap: wrap;
+  }
+
+  .car-item-info span {
+    font-size: 0.9rem;
+    justify-content: space-between;
+  }
+
+  .car-item-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .car-item h4 {
+      font-size: 1rem;
+    }
+
+    .car-item h6 {
+      font-size: 1.1rem;
+    }
+
+    .car-item-info span {
+      font-size: 1rem;
+    }
+
+    .car-item-info span .faCar {
+      font-size: 0.9rem;
+    }
+
+    .car-item-btn {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    /* HomeWork
+    * .car-item h4
+    * .car-item h6
+    * .car-item-info span
+    * car-item-info span .faCar, .faGears, .faGasPump
+    * .car-item-btn
+    */
+  }
+}
